@@ -1,5 +1,6 @@
 import Fruit from "./Fruit";
 import "./FruitList.css";
+import FruitForm from "./NewFruits/FruitForm";
 
 const fruits = [
   {
@@ -24,12 +25,20 @@ const fruits = [
     price: 30.58,
   },
 ];
-function FruitList() {
+function FruitList(props) {
+  if (props.fruitValue) {
+    fruits.push({
+      ...props.fruitValue,
+      img: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80",
+      description:
+        "The avocado fruit is a climacteric, single-seeded berry, due to the imperceptible endocarp covering the seed, rather than a drupe.",
+    });
+  }
   return (
-    <div className='container'>
-      <Fruit fruitDetail={fruits[0]} />
-      <Fruit fruitDetail={fruits[1]} />
-      <Fruit fruitDetail={fruits[2]} />
+    <div className="container">
+      {fruits.map((f) => (
+        <Fruit fruitDetail={f} />
+      ))}
     </div>
   );
 }
