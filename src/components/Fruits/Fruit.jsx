@@ -1,11 +1,16 @@
 import "./Fruit.css";
+import { Button } from "../UI/Styles/Button.styled";
 
 function Fruit(props) {
   const {
     fruitDetail: { fruitName, description, img, price },
   } = props;
+
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{ backgroundColor: price > 10 ? "#edede9" : "" }}
+    >
       <div className="card--head">
         <img src={img} alt="" />
       </div>
@@ -17,7 +22,9 @@ function Fruit(props) {
             Price <span>{price}$</span>
           </div>
 
-          <a className="add--basket">Add to basket</a>
+          <Button bg="secondary" isOutline>
+            Add to basket
+          </Button>
         </div>
       </div>
     </div>

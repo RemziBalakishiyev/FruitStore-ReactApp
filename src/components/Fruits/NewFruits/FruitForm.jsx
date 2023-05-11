@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "../../UI/Styles/Button.styled";
 import "./FruitForm.css";
 
 export default function FruitForm(props) {
@@ -12,11 +13,9 @@ export default function FruitForm(props) {
     event.preventDefault();
     const fruitModel = {
       fruitName: fruitInput.enteredname,
-
-      title: fruitInput.enteredprice,
-      price: fruitInput.enteredtitle,
+      title: fruitInput.enteredtitle,
+      price: fruitInput.enteredprice,
     };
-    console.log(props);
     props.createNewFruit(fruitModel);
   };
 
@@ -70,9 +69,7 @@ export default function FruitForm(props) {
           </div>
         </div>
         <div className="card--footer">
-          <button className="submit--btn" type="submit">
-            Submit
-          </button>
+          <Button bg="primary">Create New Fruit</Button>
         </div>
       </div>
     </form>

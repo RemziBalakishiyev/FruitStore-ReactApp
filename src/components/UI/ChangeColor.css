@@ -1,0 +1,32 @@
+.color--area {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color--changer--btn {
+  border-radius: 50%;
+  background-color: blue;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.accent-color-white {
+  accent-color: #ffff;
+}
+.accent-color-red {
+  accent-color: #e63946;
+}
+
+.accent-color-blue {
+  accent-color: #219ebc;
+}
+
+.accent-color-yellow {
+  accent-color: #ffb703;
+}
+
+.accent-color-black {
+  accent-color: #323031;
+}

@@ -4,3 +4,21 @@ section {
   align-items: center;
   flex-direction: column;
 }
+.back-color-white {
+  background-color: #ffffff;
+}
+.back-color-red {
+  background-color: #e63946;
+}
+
+.back-color-blue {
+  background-color: #219ebc;
+}
+
+.back-color-yellow {
+  background-color: #ffb703;
+}
+
+.back-color-black {
+  background-color: #323031;
+}
